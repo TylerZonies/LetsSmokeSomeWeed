@@ -1,6 +1,9 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Characters/MainChar.gd" type="Script" id=1]
 
 [node name="MainChar" type="KinematicBody2D"]
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -10,3 +13,8 @@ polygon = PoolVector2Array( -8, -24, -8, 24, 8, 24, 8, -24 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 polygon = PoolVector2Array( -8, -24, -8, 24, 8, 24, 8, -24 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 2, 2 )
+smoothing_enabled = true

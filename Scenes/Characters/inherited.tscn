@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Characters/MainChar.tscn" type="PackedScene" id=1]
+
+[node name="inherited" instance=ExtResource( 1 )]
+fall_speed = null
+jump_speed = null
+ground_speed = null
+air_speed = null
+jumps = null

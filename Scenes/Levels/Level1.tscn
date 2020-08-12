@@ -1,3 +1,21 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/TestPlatform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Characters/MainChar.tscn" type="PackedScene" id=2]
 
 [node name="Level1" type="Node2D"]
+
+[node name="TestPlatform" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128, 584 )
+
+[node name="TestPlatform2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 384, 584 )
+
+[node name="TestPlatform3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 640, 584 )
+
+[node name="TestPlatform4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 896, 584 )
+
+[node name="MainChar" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512, 552 )

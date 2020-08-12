@@ -10,11 +10,13 @@ export var ground_speed = 1000
 export var air_speed = 200
 export var jumps = 2
 
+var jump_count
 
 func _physics_process(delta):
 	apply_gravity()
 	move(is_on_floor())
 	jump()
+	$Polygon2D/Jab._animate()
 	move_and_slide(motion, UP)
 	
 
@@ -40,10 +42,13 @@ func move(can_move):
 
 func jump():
 	if is_on_floor():
-		var jump_count = jumps
+		jump_count = jumps
+	elif jumps == jump_count:
+		jump_count = jumps - 1
 	if Input.is_action_just_pressed('jump'):
 		if jump_count > 0:
 			motion.y = -jump_speed
 			move(true)
 			jump_count -= 1
-			
+
+
